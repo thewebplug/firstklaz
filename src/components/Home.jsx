@@ -10,12 +10,14 @@ import IlgGif from "../img/SaveInsta.App - 3127362897261442423_3552322412.gif";
 import SlidersGif from "../img/SaveInsta.App - 2831572746589319702.gif";
 import Só from "../img/34wefcd.jpeg";
 import Inwgs from "../img/2e3frevdsadX.png";
-import Sliders from "../img/5ftchgkgh.png";
+import Sliders from "../img/frdsvaf.jpeg";
 import ShowThem from "../img/2q3r4wfets.png";
-import Gbese from "../img/8y7iughj.png";
+import Sacrifice from "../img/sacrifice art.jpeg";
+import Gbese from "../img/cdsazvx 32.jpeg";
 import Performance from "../img/performance.gif";
+import Ogini from "../img/Ogini.png";
 import InwgsGif from "../img/SaveInsta.App - 2920846823080677928_3552322412 (1).gif";
-import ShowThemGif from "../img/SaveInsta.App - 2583044877470193482_3552322412.gif";
+
 import AmandanadI from "../img/355629770_792568572365690_8062981235167505816_n.jpg";
 import StandingOvation from "../img/EDGE3470.jpg";
 import Searching from "../img/EDGE3478.jpg";
@@ -24,11 +26,6 @@ import Dazed from "../img/355615234_1457191835025926_2323334349421373466_n.jpg";
 import BioHidden1 from "../img/428491299_18325506289114413_1712667963143189986_n.jpg";
 import BioHidden2 from "../img/428491299_18325506289114413_1712667963143189986_n.jpg";
 import HelicopterBoyFreestyle from "../img/ednvje65453.jpeg";
-import FlyDown from "../img/355844580_644009187706259_1634432745939084031_n.jpg";
-import Vexed from "../img/355683982_661516198645710_2352871357085574449_n.jpg";
-import Ecstatic from "../img/355615234_1457191835025926_2323334349421373466_n.jpg";
-import Trans from "../img/355901800_589456983319981_245378055475500611_n.jpg";
-import TransFly from "../img/356042690_112536401883342_6718170521899357372_n.jpg";
 import CityColors from "../img/363277634_797584112043644_3661946017774740676_n.jpg";
 import LagosStreetShow from "../img/360098092_18293309251114413_2192173551435584222_n.jpg";
 import AbujaStreetShow from "../img/351750477_1003886440969838_7863322309839893458_n.jpg";
@@ -40,15 +37,15 @@ import Standa from "../img/TSR_2859BBW.JPEG";
 import LookAway from "../img/TSR_2880BW.JPEG";
 import Fela from "../img/Fela.jpg";
 import Fela2 from "../img/Fela2.jpg";
-import CkayTour from "../img/341931900_1395125914585802_7044352897825937264_n.jpg";
 import { useLayoutEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 // import ElasticEmailClient from 'elastic-email-client';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import { subscribeCitizen } from "../api";
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const { hash } = useLocation();
@@ -61,11 +58,8 @@ const Home = () => {
   const [gotIt, setGotIt] = useState(false);
   const [amandaMessage, setAmandaMessage] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ email: "" });
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
 
   const handleSubmitGuess = (e) => {
     e.preventDefault();
@@ -154,26 +148,25 @@ const Home = () => {
     });
   }, []);
 
-  useLayoutEffect(() =>{
-    let smoother = ScrollSmoother.create({
-      smooth: 1.8, // how long (in seconds) it takes to "catch up" to the native scroll position
-      effects: true, // looks for data-speed and data-lag attributes on elements
-      smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-    });
+  // useLayoutEffect(() =>{
+  //   let smoother = ScrollSmoother.create({
+  //     smooth: 1.8, // how long (in seconds) it takes to "catch up" to the native scroll position
+  //     effects: true, // looks for data-speed and data-lag attributes on elements
+  //     smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  //   });
 
-    const storeNav = document.querySelector(".store_nav");
+  //   const storeNav = document.querySelector(".store_nav");
+  //   storeNav.addEventListener("click", () => smoother?.scrollTo(".store", true, "top"))
 
-    storeNav.addEventListener("click", () => smoother.scrollTo(".store", true, "top"))
+  //   const musicNav = document.querySelector(".music_nav")
+  //   musicNav.addEventListener("click", () => smoother?.scrollTo(".music", true, "top"))
 
-    const musicNav = document.querySelector(".music_nav")
-    musicNav.addEventListener("click", () => smoother.scrollTo(".music", true, "top"))
+  //   const videoNav = document.querySelector(".video_nav")
+  //   videoNav.addEventListener("click", () => smoother?.scrollTo(".videos", true, "top"))
 
-    const videoNav = document.querySelector(".video_nav")
-    videoNav.addEventListener("click", () => smoother.scrollTo(".video", true, "top"))
-
-    const showsNav = document.querySelector(".shows_nav")
-    showsNav.addEventListener("click", () => smoother.scrollTo(".shows", true, "top"))
-  }, [])
+  //   const showsNav = document.querySelector(".shows_nav")
+  //   showsNav.addEventListener("click", () => smoother?.scrollTo(".shows", true, "top"))
+  // }, [])
 
   const MAILCHIMP_URL = `https://us12.list-manage.com/subscribe/post?u=9201577588cdd192c20706dd9&id=5eb347ea22`; // Replace with your actual URL
   // const MAILCHIMP_URL = "https://jster.us7.list-manage.com/subscribe/post?u=ed40c0084a0c5ba31b3365d65&id=ec6f32bf5e"; // Replace with your actual URL
@@ -454,26 +447,20 @@ const Home = () => {
     return () => ctx.kill();
   }, []);
 
-  // const client = new ElasticEmailClient({
-  //   apiKey: '544D3DB1DA9006C3056B96F1EAF16EF8C1B1CD2DCF6B9A8AA8E30A9D4B1B8DFBF9AD8DD755478B9A5EF4A259DDC2557B'
-  // });
 
-  // const sendEmail = async() => {
-
-  //   const response = await client.mail.send({
-  //     to: ['contactwebplug@gmail.com'],
-  //     from: 'saleemjibril5@gmail.com',
-  //     subject: 'Test email',
-  //     bodyHtml: '<h1>This is test mail</h1>'
-  //   });
-
-  // }
-
-  // const handleClick = () => {
-  //   sendEmail();
-  // }
-  // useEffect(() => {
-  // }, [])
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const response = await subscribeCitizen(email);
+    console.log('response', response);
+    setAmandaMessage("subscribed");
+    setEmail("")
+    setLoading(false);
+    setTimeout(() => {
+      setAmandaMessage(null)
+    }, 10000);
+  }
+ 
   return (
     <div>
       <div
@@ -484,11 +471,11 @@ const Home = () => {
         <div id="smooth-content">
           <header>
             <div className="nav">
-              <div className="about_nav">about</div>
-              <div className="store_nav">store</div>
-              <div className="music_nav">music</div>
-              <div className="video_nav">videos</div>
-              <div className="shows_nav">shows</div>
+              <a href="#about" className="about_nav">about</a>
+              <a href="#store" className="store_nav">store</a>
+              <a href="#music" className="music_nav">music</a>
+              <a href="#videos" className="video_nav">videos</a>
+              <a href="#shows" className="shows_nav">shows</a>
             </div>
             <div
               onClick={() => (active ? setActive(false) : setActive(true))}
@@ -903,7 +890,7 @@ const Home = () => {
 
             <div className="store" id="store">
               <div className="store_title pointer-title">STORE</div>
-              <div className="stream_group">
+              {/* <div className="stream_group">
                 <svg
                   viewBox="0 0 256 292"
                   xmlns="http://www.w3.org/2000/svg"
@@ -951,25 +938,16 @@ const Home = () => {
                 <div className="store_inner">
                   <div className="slider_item">
                     <img src={CityColors} alt="" />
-                    {/* <div className="store_gif">
-                  <img src={LagosStreetShow} alt="" />
-                </div> */}
                     <div className="store_name">I like girls</div>
                     <button className="store_button">Sold out</button>
                   </div>
                   <div>
                     <img src={LagosStreetShow} alt="" />
-                    {/* <div className="store_gif">
-                  <img src={SoGif} alt="" />
-                </div> */}
                     <div className="store_name">Só</div>
                     <button className="store_button">Sold out</button>
                   </div>
                   <div>
                     <img src={AbujaStreetShow} alt="" />
-                    {/* <div className="store_gif">
-                  <img src={HelicopterGif} alt="" />
-                </div> */}
                     <div className="store_name">Helicopter boy(freestyle)</div>
                     <button className="store_button">Sold out</button>
                   </div>
@@ -999,7 +977,7 @@ const Home = () => {
                     </g>{" "}
                   </g>
                 </svg>
-              </div>
+              </div> */}
             </div>
 
             <div className="music" id="music">
@@ -1126,6 +1104,42 @@ const Home = () => {
                 </svg>
                 <div className="music_inner">
                   <a
+                    href="https://waverlymusik.lnk.to/GenZFujiII"
+                    target="_blank"
+                    className="slider_item"
+                  >
+                    <img className="music_artwork" src={Genzfuji} alt="" />
+                    {/* <div className="music_gif">
+                      <img src={Genzfuji} alt="" />
+                    </div> */}
+                    <div className="music_name">Gen-Z Fuji II</div>
+                    <button className="music_button">Listen now</button>
+                  </a>
+                  <a
+                    href="https://onerpm.link/gen-zfuji"
+                    target="_blank"
+                    className="slider_item"
+                  >
+                    <img className="music_artwork" src={Genzfuji} alt="" />
+                    {/* <div className="music_gif">
+                      <img src={Genzfuji} alt="" />
+                    </div> */}
+                    <div className="music_name">Gen-Z Fuji</div>
+                    <button className="music_button">Listen now</button>
+                  </a>
+                  <a
+                    href="https://onerpm.link/firstklaz-ogini"
+                    target="_blank"
+                    className="slider_item"
+                  >
+                    <img className="music_artwork" src={Ogini} alt="" />
+                    {/* <div className="music_gif">
+                      <img src={Ogini} alt="" />
+                    </div> */}
+                    <div className="music_name">Ogini</div>
+                    <button className="music_button">Listen now</button>
+                  </a>
+                  <a
                     href="https://orcd.co/ilikegirls_firstklazhitsound"
                     target="_blank"
                     className="slider_item"
@@ -1176,7 +1190,7 @@ const Home = () => {
                     href="https://fanlink.to/Firstklaz-Sacrifice"
                     target="_blank"
                   >
-                    <img src={ShowThem} alt="" />
+                    <img src={Sacrifice} alt="" />
                     <div className="music_gif">
                       {/* <img src={ShowThemGif} alt="" /> */}
                     </div>
@@ -1388,7 +1402,7 @@ const Home = () => {
             </div>
             <div className="shows" id="shows" ref={showsRef}>
               <div className="shows_title pointer-title">
-                UPCOMING SHOWS/EVENTS
+                SHOWS/EVENTS
               </div>
               <img className="performance" src={Performance} alt="" />{" "}
               {/* this should expand on scroll and should be tied to scrolling. i.e scrubbing */}
@@ -1419,61 +1433,30 @@ const Home = () => {
                 </svg>
                 <div className="shows_inner">
                   <div className="slider_item">
-                    <img src={CityColors} alt="" />
+                    <img src={LagosStreetShow} alt="" />
                     {/* <div className="shows_gif">
                   <img src={LagosStreetShow} alt="" />
                 </div> */}
-                    <div className="shows_name">I like girls</div>
-                    <button className="shows_button">Sold out</button>
-                  </div>
-                  <div>
-                    <img src={LagosStreetShow} alt="" />
-                    {/* <div className="shows_gif">
-                  <img src={SoGif} alt="" />
-                </div> */}
-                    <div className="shows_name">Só</div>
-                    <button className="shows_button">Sold out</button>
-                  </div>
-                  <div>
-                    <img src={LagosStreetShow} alt="" />
-                    {/* <div className="shows_gif">
-                  <img src={SoGif} alt="" />
-                </div> */}
-                    <div className="shows_name">Só</div>
-                    <button className="shows_button">Sold out</button>
-                  </div>
-                  <div>
-                    <img src={LagosStreetShow} alt="" />
-                    {/* <div className="shows_gif">
-                  <img src={SoGif} alt="" />
-                </div> */}
-                    <div className="shows_name">Só</div>
-                    <button className="shows_button">Sold out</button>
-                  </div>
-                  <div>
-                    <img src={LagosStreetShow} alt="" />
-                    {/* <div className="shows_gif">
-                  <img src={SoGif} alt="" />
-                </div> */}
-                    <div className="shows_name">Só</div>
-                    <button className="shows_button">Sold out</button>
-                  </div>
-                  <div>
-                    <img src={LagosStreetShow} alt="" />
-                    {/* <div className="shows_gif">
-                  <img src={SoGif} alt="" />
-                </div> */}
-                    <div className="shows_name">Só</div>
+                    <div className="shows_name">Firstklaz Street Show (Lagos)</div>
                     <button className="shows_button">Sold out</button>
                   </div>
                   <div>
                     <img src={AbujaStreetShow} alt="" />
                     {/* <div className="shows_gif">
-                  <img src={HelicopterGif} alt="" />
+                  <img src={SoGif} alt="" />
                 </div> */}
-                    <div className="shows_name">Helicopter boy(freestyle)</div>
+                    <div className="shows_name">Firstklaz Street Show (Abuja)</div>
                     <button className="shows_button">Sold out</button>
                   </div>
+                  <div>
+                    <img src={CityColors} alt="" />
+                    {/* <div className="shows_gif">
+                  <img src={SoGif} alt="" />
+                </div> */}
+                    <div className="shows_name">City of Colors</div>
+                    <button className="shows_button">Sold out</button>
+                  </div>
+                  
                 </div>
 
                 <svg
@@ -1502,17 +1485,27 @@ const Home = () => {
                 </svg>
               </div>
             </div>
+            {/* <div className="shows2">
+              <div className="shows2__card1">
+               
+                <div className="shows2__card1__card">
+                  Why would I want<span><img className="amanda-slant" src={Amanda} alt="" /></span> <span><img className="amanda-straight" src={Amanda} alt="" /></span>furniture from<span><img className="amanda-slant" src={Amanda} alt="" /></span>a century
+                </div>
+                
+              </div>
+              <div className="shows2__card2"></div>
+            </div> */}
             <div className="album">
               <div className="album_title">
-                COLORS:
+                LATEST RELEASE:
                 <br />
-                THE ALBUM
+                GEN-Z FUJI II
               </div>
-              <div className="album_subtitle">FIRSTKLAZ'S 1sT STUDIO ALBUM</div>
+              <div className="album_subtitle">LISTEN HERE</div>
               <div className="view">
                 <iframe
                   style={{ borderRadius: "26px" }}
-                  src="https://open.spotify.com/embed/album/3Vr6hrhxOClze1W0zMfXTO?utm_source=generator&theme=0"
+                  src="https://open.spotify.com/embed/album/6bwxgJNBN3WwjAFuNSfdov?utm_source=generator&theme=0"
                   width="100%"
                   height="100%"
                   frameBorder="0"
@@ -1898,53 +1891,24 @@ const Home = () => {
             
           </main>
           <footer>
-            <div className="title">BECOME A FIRSTKLAZ CITZEN</div>
-            <MailchimpSubscribe
-              url={MAILCHIMP_URL}
-              render={({ subscribe, status, message }) => (
-                <form className="form" onSubmit={(e) => e.preventDefault()}>
-                  {/* <label htmlFor="">Name</label>
-          <input type="text" placeholder="Full Name" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          /> */}
+            <div className="title">BECOME A FIRSTKLAZ CITZEN!</div>
+          
+                <form className="form" onSubmit={handleSubscribe}>
                   <label htmlFor="">Email</label>
                   <input
                     type="email"
                     placeholder="hello@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
-                  {/* <label htmlFor="">Country</label>
-          <select name="" id="">
-            <option value="">Nigeria</option>
-            <option value="">Nigeria</option>
-          </select> */}
-                  {/* <div>STATUS:{status}</div> */}
-                  {/* {status === 'sending' && <p>Submitting...</p>} */}
-                  {status === "error" && (
-                    <p style={{ color: "red" }}>{message}</p>
-                  )}
-                  {/* {status === 'success' && <p style={{ color: 'green' }}>Subscribed!</p>} */}
+                 
                   <button
                     type="submit"
-                    // onClick={handleClick}
-                    onClick={() =>
-                      subscribe({
-                        EMAIL: email,
-                        NAME: "Saleem Jibril",
-                      })
-                    }
                   >
-                    {status === "sending" ? "Sending..." : "Register"}
+                    {loading ? "Loading..." : "Register"}
                   </button>
-                </form>
-              )}
-              // options={MailchimpOptions}
-            />
-
-            {/* <div className="one"></div> */}
-            {/* <div className="two"></div> */}
+                  </form>
           </footer>
          
         </div>
@@ -2021,6 +1985,11 @@ const Home = () => {
             <div className={"amanda_thank_you_text"}>
               Congratulations! Now you have access to the offical cover art for
               "Y2K DISCO" don't share it with anyone!
+            </div>
+          )}
+          {amandaMessage === "subscribed" && (
+            <div className={"amanda_thank_you_text"}>
+              Congratulations! You're officially a Firstklaz Citizen
             </div>
           )}
           {/* <div className={"amanda_thank_you_text"}>Opps! you didn't get it right. Thank you for trying!</div> */}

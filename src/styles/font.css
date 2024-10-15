@@ -1,8 +1,16 @@
 @font-face {
     font-family: Plunct;
     src: url('../fonts/plunct.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
 }
 @font-face {
     font-family: Plact;
     src: url('../fonts/plact.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
 }
