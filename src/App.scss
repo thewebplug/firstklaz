@@ -932,7 +932,7 @@ position: relative;
     width: 100%;
     max-width: 900px;
     margin: auto;
-    height: 1230px;
+    height: auto;
     border: 14px solid #fff;
     border-radius: 40px;
     // border-radius
@@ -955,6 +955,10 @@ position: relative;
   justify-content: center;
   // background: yellow;
   margin-top: -100px;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 
   &__active {
     position: relative;

@@ -416,22 +416,22 @@ const Home = () => {
         });
       });
 
-      gsap.to(".shows .performance", {
-        scrollTrigger: {
-          trigger: ".shows_inner",
-          //   markers: true,
-          start: "top 48%",
-          end: "top",
-          scrub: true,
-          pin: ".shows",
-          once: true,
-        },
+      // gsap.to(".shows .performance", {
+      //   scrollTrigger: {
+      //     trigger: ".shows_inner",
+      //     //   markers: true,
+      //     start: "top 48%",
+      //     end: "top",
+      //     scrub: true,
+      //     pin: ".shows",
+      //     once: true,
+      //   },
 
-        scale: 1.7,
-        duration: 10,
-        right: "-200px !important",
-        delay: 4,
-      });
+      //   scale: 1.7,
+      //   duration: 10,
+      //   right: "-200px !important",
+      //   delay: 4,
+      // });
 
       gsap.to(".hero__helicopter-svg", {
         scrollTrigger: {
