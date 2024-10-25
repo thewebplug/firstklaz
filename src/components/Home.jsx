@@ -2,23 +2,25 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "../img/Focus Image.jpg";
 import gsap from "gsap";
 import Amanda from "../img/Amanda.png";
-import Ilg from "../img/234efw32232.jpeg";
+import Ilg from "../img/234efw32232.jpg";
 import Genzfuji from "../img/genzfuji.jpg";
-import Genzfaaji from "../img/genz-faaji.png";
-import GenzArewa from "../img/genz-arewa.JPG";
+import Genzfaaji from "../img/genz-faaji.jpg";
+import GenzArewa from "../img/genz-arewa.jpg";
 import FandFFlyer from "../img/F&F Flyer.jpg";
 import HelicopterGif from "../img/SaveInsta.App - 3056123081071349367.gif";
 import SoGif from "../img/SaveInsta.App - 3096553013569957506_3552322412.gif";
 import IlgGif from "../img/SaveInsta.App - 3127362897261442423_3552322412.gif";
 import SlidersGif from "../img/SaveInsta.App - 2831572746589319702.gif";
-import Só from "../img/34wefcd.jpeg";
-import Inwgs from "../img/2e3frevdsadX.png";
-import Sliders from "../img/frdsvaf.jpeg";
-import ShowThem from "../img/2q3r4wfets.png";
-import Sacrifice from "../img/sacrifice art.jpeg";
-import Gbese from "../img/cdsazvx 32.jpeg";
+import Só from "../img/34wefcd.jpg";
+import Inwgs from "../img/2e3frevdsadX.jpg";
+import Sliders from "../img/frdsvaf.jpg";
+import ShowThem from "../img/cdac3223.jpg";
+import Olomi from "../img/olomi.jpg";
+import Sacrifice from "../img/sacrifice art.jpg";
+import Gbese from "../img/cdsazvx 32.jpg";
+import Tonight from "../img/tonight.jpg";
 import Performance from "../img/performance.gif";
-import Ogini from "../img/Ogini.png";
+import Ogini from "../img/Ogini.jpg";
 import InwgsGif from "../img/SaveInsta.App - 2920846823080677928_3552322412 (1).gif";
 import { Tooltip } from 'react-tooltip';
 import AmandanadI from "../img/355629770_792568572365690_8062981235167505816_n.jpg";
@@ -28,7 +30,7 @@ import Pose from "../img/EDGE3472.jpg";
 import Dazed from "../img/355615234_1457191835025926_2323334349421373466_n.jpg";
 import BioHidden1 from "../img/428491299_18325506289114413_1712667963143189986_n.jpg";
 import BioHidden2 from "../img/428491299_18325506289114413_1712667963143189986_n.jpg";
-import HelicopterBoyFreestyle from "../img/ednvje65453.jpeg";
+import HelicopterBoyFreestyle from "../img/ednvje65453.jpg";
 import CityColors from "../img/363277634_797584112043644_3661946017774740676_n.jpg";
 import LagosStreetShow from "../img/360098092_18293309251114413_2192173551435584222_n.jpg";
 import FAndFPh from "../img/firstKlaz-and-friends-ph.jpg";
@@ -666,6 +668,7 @@ const Home = () => {
               </div>
             </div>
             <div className="social_groups social_groups_desktop">
+              <a href="https://instagram.com/firstklaz" target="_blank">
               <svg
                 fill="#ffffff"
                 version="1.1"
@@ -697,6 +700,8 @@ const Home = () => {
                   </g>{" "}
                 </g>
               </svg>
+              </a>
+              <a href="https://www.facebook.com/firstklaz/" target="_blank">
 
               <svg
                 viewBox="0 0 1024 1024"
@@ -726,6 +731,9 @@ const Home = () => {
                   ></path>
                 </g>
               </svg>
+</a>
+
+<a href="https://x.com/firstklaz_" target="_blank">
 
               <svg
                 fill="#ffffff"
@@ -754,6 +762,9 @@ const Home = () => {
                   </g>{" "}
                 </g>
               </svg>
+              </a>
+              <a href="https://www.tiktok.com/@firstklaz" target="_blank">
+
               <svg
                 fill="#ffffff"
                 viewBox="0 0 32 32"
@@ -773,6 +784,8 @@ const Home = () => {
                   <path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path>{" "}
                 </g>
               </svg>
+              </a>
+              <a href="https://www.youtube.com/@firstklaz" target="_blank">
               <svg
                 className="youtube"
                 viewBox="0 -146.13 500.612 500.612"
@@ -797,6 +810,7 @@ const Home = () => {
                   ></path>
                 </g>
               </svg>
+              </a>
             </div>
           </header>
           <main>
@@ -1641,6 +1655,14 @@ Abuja
                     <button className="music_button">Listen now</button>
                   </a>
                   <a href="https://fanlink.to/ShowThem" target="_blank">
+                    <img src={Olomi} alt="" />
+                    <div className="music_gif">
+                      {/* <img src={ShowThemGif} alt="" /> */}
+                    </div>
+                    <div className="music_name">Olomi</div>
+                    <button className="music_button">Listen now</button>
+                  </a>
+                  <a href="https://fanlink.to/ShowThem" target="_blank">
                     <img src={ShowThem} alt="" />
                     <div className="music_gif">
                       {/* <img src={ShowThemGif} alt="" /> */}
@@ -1656,12 +1678,12 @@ Abuja
                     <div className="music_name">Gbese</div>
                     <button className="music_button">Listen now</button>
                   </a>
-                  <a>
-                    <img src={HelicopterBoyFreestyle} alt="" />
+                  <a href="https://open.spotify.com/track/4LHgluF02FqumshmgPop4a?si=a33fdc13aa274211" target="_blank">
+                    <img src={Tonight} alt="" />
                     <div className="music_gif">
-                      <img src={HelicopterGif} alt="" />
+                      {/* <img src={HelicopterGif} alt="" /> */}
                     </div>
-                    <div className="music_name">Helicopter boy(freestyle)</div>
+                    <div className="music_name">Tonight</div>
                     <button className="music_button">Listen now</button>
                   </a>
                 </div>
