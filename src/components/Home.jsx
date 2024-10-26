@@ -5,7 +5,7 @@ import Amanda from "../img/Amanda.png";
 import Ilg from "../img/234efw32232.jpg";
 import Genzfuji from "../img/genzfuji.jpg";
 import Genzfaaji from "../img/genz-faaji.jpg";
-import GenzArewa from "../img/genz-arewa.jpg";
+import GenzArewa from "../img/genz-arewaa.jpg";
 import FandFFlyer from "../img/F&F Flyer.jpg";
 import HelicopterGif from "../img/SaveInsta.App - 3056123081071349367.gif";
 import SoGif from "../img/SaveInsta.App - 3096553013569957506_3552322412.gif";
@@ -921,7 +921,7 @@ const Home = () => {
                 <br />
                 <span>THE NIGERIAN TOUR</span>
               </div>
-              <div className="album_button">GET YOUR TICKETS HERE</div>
+              <a className="album_button" href="https://tix.africa/discover/fnftour" target="_blank">GET YOUR TICKETS HERE</a>
               <div className="view-img">
                 <img className="music_artwork" src={FandFFlyer} alt="" />
               </div>
@@ -1935,13 +1935,13 @@ Abuja
                   </g>
                 </svg>
                 <div className="shows_inner">
-                  <div className="slider_item">
+                  <a className="slider_item" href="https://tix.africa/discover/fnftour" target="_blank">
                     <img src={FAndFPh} alt="" />
                     <div className="shows_name">
                       Firstklaz And Friends Port Harcourt
                     </div>
                     <button className="shows_button">Buy tickets</button>
-                  </div>
+                  </a>
                   <div className="slider_item">
                     <img src={FAndFAbj} alt="" />
                     <div className="shows_name">
