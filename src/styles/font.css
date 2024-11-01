@@ -14,3 +14,27 @@
     font-display: swap;
 
 }
+@font-face {
+    font-family: TimesCG;
+    src: url('../fonts/Times CG.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
+}
+@font-face {
+    font-family: RocGroteskWide;
+    src: url('../fonts/Roc-Grotesk-W05-Wide-Bold.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
+}
+@font-face {
+    font-family: Afronaut;
+    src: url('../fonts/AfronautTest-Regular.otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
+}
