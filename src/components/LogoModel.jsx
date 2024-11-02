@@ -10,7 +10,7 @@ import {
   Stage
 } from '@react-three/drei';
 
-const LogoModel = ({ rotationY }) => {
+const LogoModel = ({ rotationY, scale }) => {
   const { scene } = useGLTF('/firstklaz-logo.glb');
   
   useEffect(() => {
@@ -38,7 +38,7 @@ const LogoModel = ({ rotationY }) => {
   };
 
   return (
-    <Center scale={1}>
+    <Center scale={scale}>
       <group rotation-y={rotationY}>
         <primitive 
           object={scene} 
@@ -86,8 +86,9 @@ const LogoModelViewer = ({handleHome}) => {
   };
 
   return (
+    <>
     <div 
-      className="logo-model-viewer" 
+      className="logo-model-viewer model-viewer-desktop" 
       style={{ width: '200px', height: '100px', cursor: 'pointer' }}
       onClick={handleHome}
       // onMouseDown={handleMouseDown}
@@ -106,7 +107,7 @@ const LogoModelViewer = ({handleHome}) => {
             environment="city"
             adjustCamera={false}
           >
-            <LogoModel rotationY={rotationY} />
+            <LogoModel scale={1} rotationY={rotationY} />
           </Stage>
           <Environment preset="city" background={false} />
           <ContactShadows
@@ -119,6 +120,40 @@ const LogoModelViewer = ({handleHome}) => {
         </Suspense>
       </Canvas>
     </div>
+    <div 
+      className="logo-model-viewer model-viewer-mobile" 
+      style={{ width: '200px', height: '100px', cursor: 'pointer' }}
+      onClick={handleHome}
+      // onMouseDown={handleMouseDown}
+      // onMouseMove={handleMouseMove}
+      // onMouseUp={handleMouseUp}
+      // onMouseLeave={handleMouseUp}
+      // onTouchStart={handleTouchStart}
+      // onTouchMove={handleTouchMove}
+      // onTouchEnd={handleMouseUp}
+    >
+      <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
+        {/* <color attach="background" args={['yellow']} /> */}
+        <Suspense fallback={null}>
+          <Stage
+            intensity={1}
+            environment="city"
+            adjustCamera={false}
+          >
+            <LogoModel scale={0.7} rotationY={rotationY} />
+          </Stage>
+          <Environment preset="city" background={false} />
+          <ContactShadows
+            position={[0, -1.4, 0]}
+            opacity={0.75}
+            scale={10}
+            blur={2.5}
+            far={4}
+          />
+        </Suspense>
+      </Canvas>
+    </div>
+    </>
   );
 };
 
