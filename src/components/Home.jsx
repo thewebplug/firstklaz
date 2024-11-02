@@ -56,6 +56,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import { subscribeCitizen } from "../api";
 import ModelViewer from "./Model";
+import LogoModelViewer from "./LogoModel";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -99,7 +100,7 @@ const Home = () => {
     }
   }, [modalOpen]);
   useEffect(() => {
-    if(page === "music") {
+    if(page === "music" || page === "store") {
       const musicNextBtn = document.querySelector(".music_next_btn");
     const musicPrevBtn = document.querySelector(".music_prev_btn");
     const musicSlider = document.querySelector(".music_inner");
@@ -189,7 +190,7 @@ const Home = () => {
   //     smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
   //   });
 
-  //   const storeNav = document.querySelector(".store_nav");
+  //   const storeNav = document.querySelector(".music_nav");
   //   storeNav.addEventListener("click", () => smoother?.scrollTo(".store", true, "top"))
 
   //   const musicNav = document.querySelector(".music_nav")
@@ -618,7 +619,7 @@ const Home = () => {
               >
                 about
               </a>
-              <a href="#store" className="store_nav"
+              <a href="#store" className="music_nav"
               onClick={() => setPage("store")}
               >
                 store
@@ -675,9 +676,10 @@ const Home = () => {
                   </defs>
                 </svg>
               </div> */}
-              <img
+              {/* <img
               src={FirstklazLogo}
-              />
+              /> */}
+              <LogoModelViewer handleHome={() => setPage("")} />
               <div className="social_groups social_groups_mobile">
                 <svg
                   fill="#ffffff"
@@ -964,7 +966,7 @@ const Home = () => {
               >
                 gallery
               </a>
-              {/* <a href="#store" className="store_nav">
+              {/* <a href="#store" className="music_nav">
                 store
               </a> */}
               {/* <a href="#music" className="music_nav">
@@ -1499,8 +1501,8 @@ Abuja
 
            {page === "store" && 
            
-           <div className="store" id="store">
-           {/* <div className="store_title pointer-title">MUSIC</div> */}
+           <div className="music" id="store">
+           {/* <div className="music_title pointer-title">MUSIC</div> */}
            {/* <div className="stream_group">
              <svg
                viewBox="0 0 48 48"
@@ -1596,9 +1598,9 @@ Abuja
              </svg>
            </div> */}
            {/* <img className="performance" src={AmandanadI} alt="" />{" "} */}
-           <div className="store_slider">
+           <div className="music_slider">
              <svg
-               className="pointer store_prev_btn prev_btn"
+               className="pointer music_prev_btn prev_btn"
                fill="#ffffff"
                viewBox="-28.75 0 156.07 156.07"
                xmlns="http://www.w3.org/2000/svg"
@@ -1621,17 +1623,17 @@ Abuja
                  </g>{" "}
                </g>
              </svg>
-             <div className="store_inner">
+             <div className="music_inner">
                <a
                  href="https://paystack.com/pay/nvdyhwcpxf"
                  target="_blank"
                  className="slider_item"
                >
-                 <img className="store_artwork" src={BlackFront} alt="" />
-                 <div className="store_gif">
+                 <img className="music_artwork" src={BlackFront} alt="" />
+                 <div className="music_gif store_gif">
                    <img src={BlackBack} alt="" />
                  </div>
-                 <div className="store_name">Tour Black Tee</div>
+                 <div className="music_name">Tour Black Tee</div>
                  <button className="music_button">Buy now</button>
                </a>
                <a
@@ -1639,11 +1641,11 @@ Abuja
                  target="_blank"
                  className="slider_item"
                >
-                 <img className="store_artwork" src={WhiteFront} alt="" />
-                 <div className="store_gif">
+                 <img className="music_artwork" src={WhiteFront} alt="" />
+                 <div className="music_gif store_gif">
                    <img src={WhiteBack} alt="" />
                  </div>
-                 <div className="store_name">Tour White Tee</div>
+                 <div className="music_name">Tour White Tee</div>
                  <button className="music_button">Buy now</button>
                </a>
                <a
@@ -1651,11 +1653,11 @@ Abuja
                  target="_blank"
                  className="slider_item"
                >
-                 <img className="store_artwork" src={BlackFront} alt="" />
-                 <div className="store_gif">
+                 <img className="music_artwork" src={BlackFront} alt="" />
+                 <div className="music_gif store_gif">
                    <img src={BlackBack} alt="" />
                  </div>
-                 <div className="store_name">Tour Black Tee</div>
+                 <div className="music_name">Tour Black Tee</div>
                  <button className="music_button">Buy now</button>
                </a>
                <a
@@ -1663,11 +1665,11 @@ Abuja
                  target="_blank"
                  className="slider_item"
                >
-                 <img className="store_artwork" src={WhiteFront} alt="" />
-                 <div className="store_gif">
+                 <img className="music_artwork" src={WhiteFront} alt="" />
+                 <div className="music_gif store_gif">
                    <img src={WhiteBack} alt="" />
                  </div>
-                 <div className="store_name">Tour Black Tee</div>
+                 <div className="music_name">Tour White Tee</div>
                  <button className="music_button">Buy now</button>
                </a>
             
@@ -1678,7 +1680,7 @@ Abuja
                viewBox="-28.75 0 156.07 156.07"
                xmlns="http://www.w3.org/2000/svg"
                stroke="#ffffff"
-               className="pointer store_next_btn next_btn"
+               className="pointer music_next_btn next_btn"
              >
                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                <g
@@ -2326,8 +2328,8 @@ Abuja
                   {/* <div className="music_gif">
                     <img src={Genzfuji} alt="" />
                   </div> */}
-                  <div className="music_name">Gen-Z Arewa</div>
-                  <button className="music_button">Buy tickets</button>
+                  <div className="music_name">Firstklaz & Friends PortHarcourt</div>
+                  <button className="music_button">Sold out</button>
                 </a>
                 <a
                   href="https://open.spotify.com/track/6ML4o3KWB24d8R7RU6fVkl?si=cfd04121cc7148da"
@@ -2338,7 +2340,7 @@ Abuja
                   {/* <div className="music_gif">
                     <img src={Genzfuji} alt="" />
                   </div> */}
-                  <div className="music_name">Gen-Z Faaji</div>
+                  <div className="music_name">Firstklaz & Friends Abuja</div>
                   <button className="music_button">Sold out</button>
                 </a>
                 <a
@@ -2350,7 +2352,7 @@ Abuja
                   {/* <div className="music_gif">
                     <img src={Genzfuji} alt="" />
                   </div> */}
-                  <div className="music_name">Gen-Z Fuji II</div>
+                  <div className="music_name">Firstklaz Club Tour Lagos</div>
                   <button className="music_button">Sold out</button>
                 </a>
                 <a
@@ -2362,7 +2364,7 @@ Abuja
                   {/* <div className="music_gif">
                     <img src={Genzfuji} alt="" />
                   </div> */}
-                  <div className="music_name">Gen-Z Fuji</div>
+                  <div className="music_name">Firstklaz Street Show Abuja</div>
                   <button className="music_button">Sold out</button>
                 </a>               
               </div>

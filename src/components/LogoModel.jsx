@@ -10,8 +10,8 @@ import {
   Stage
 } from '@react-three/drei';
 
-const Model = ({ rotationY, scale }) => {
-  const { scene } = useGLTF('/y - Copy - Copy.glb');
+const LogoModel = ({ rotationY }) => {
+  const { scene } = useGLTF('/firstklaz-logo.glb');
   
   useEffect(() => {
     // Enhance the material properties
@@ -38,7 +38,7 @@ const Model = ({ rotationY, scale }) => {
   };
 
   return (
-    <Center scale={scale} >
+    <Center scale={1}>
       <group rotation-y={rotationY}>
         <primitive 
           object={scene} 
@@ -50,7 +50,7 @@ const Model = ({ rotationY, scale }) => {
   );
 };
 
-const ModelViewer = () => {
+const LogoModelViewer = ({handleHome}) => {
   const [rotationY, setRotationY] = React.useState(0);
   const isDragging = useRef(false);
   const previousX = useRef(0);
@@ -86,73 +86,40 @@ const ModelViewer = () => {
   };
 
   return (
-    <>
     <div 
-      className="model-viewer model-viewer-desktop" 
-      style={{ width: '100%', height: '100vh', cursor: 'grab' }}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleMouseUp}
+      className="logo-model-viewer" 
+      style={{ width: '200px', height: '100px', cursor: 'pointer' }}
+      onClick={handleHome}
+      // onMouseDown={handleMouseDown}
+      // onMouseMove={handleMouseMove}
+      // onMouseUp={handleMouseUp}
+      // onMouseLeave={handleMouseUp}
+      // onTouchStart={handleTouchStart}
+      // onTouchMove={handleTouchMove}
+      // onTouchEnd={handleMouseUp}
     >
       <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
-        <color attach="background" args={['#000000']} />
+        {/* <color attach="background" args={['yellow']} /> */}
         <Suspense fallback={null}>
           <Stage
             intensity={1}
             environment="city"
             adjustCamera={false}
           >
-            <Model scale={2} rotationY={rotationY} />
+            <LogoModel rotationY={rotationY} />
           </Stage>
           <Environment preset="city" background={false} />
-          {/* <ContactShadows
+          <ContactShadows
             position={[0, -1.4, 0]}
             opacity={0.75}
             scale={10}
             blur={2.5}
             far={4}
-          /> */}
+          />
         </Suspense>
       </Canvas>
     </div>
-    <div 
-      className="model-viewer model-viewer-mobile" 
-      style={{ width: '100%', height: '100vh', cursor: 'grab' }}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleMouseUp}
-    >
-      <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
-        <color attach="background" args={['#000000']} />
-        <Suspense fallback={null}>
-          <Stage
-            intensity={1}
-            environment="city"
-            adjustCamera={false}
-          >
-            <Model scale={1.3} rotationY={rotationY} />
-          </Stage>
-          <Environment preset="city" background={false} />
-          {/* <ContactShadows
-            position={[0, -1.4, 0]}
-            opacity={0.75}
-            scale={10}
-            blur={2.5}
-            far={4}
-          /> */}
-        </Suspense>
-      </Canvas>
-    </div>
-    </>
   );
 };
 
-export default ModelViewer;
+export default LogoModelViewer;
