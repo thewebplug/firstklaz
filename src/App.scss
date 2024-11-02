@@ -73,31 +73,7 @@ header {
     transform: translateY(-100px);
   }
 
-  .social_groups {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    // flex: 1;
-    // background-color: blue;
-    width: 100%;
-
-    svg {
-      width: 20px;
-      height: 20px;
-      margin-right: 20px;
-      cursor: pointer;
-    }
-
-    .youtube {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  .social_groups_mobile {
-    display: none;
-  }
-
+ 
   .home {
     overflow-x: hidden;
     position: relative;
@@ -1342,9 +1318,9 @@ footer {
     width: 100%;
     height: 100%;
     // transition: ;
-    background-color: #3e3e3e;
+    background-color: #000;
     // display: initial;
-    font-size: 5rem;
+    font-size: 3.6rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -1352,15 +1328,17 @@ footer {
     padding: 40px 0;
     display: flex;
     flex-direction: column;
+    font-family: RocGroteskWide;
+    text-transform: uppercase;
 
-    @media (max-width: 565px) {
-      padding: 60px 0;
-    }
+    // @media (max-width: 565px) {
+    //   padding: 60px 0;
+    // }
 
     .hamburger {
       display: initial;
       // background-color: yellow;
-      padding-left: 20px;
+      padding-left: 40px;
       z-index: 10;
 
       .hamburger1 {
@@ -1390,6 +1368,7 @@ footer {
         height: 2px;
         transition: 0.6s;
         transform: rotate(45deg);
+        margin-top: 9.8px;
       }
       .hamburger2 {
         // display: none !important;
@@ -1400,7 +1379,7 @@ footer {
         width: 35px;
         transition: 0.6s;
         transform: rotate(-45deg);
-        margin-top: -15px;
+        margin-top: -16px;
       }
     }
 
@@ -1415,7 +1394,7 @@ footer {
       margin-top: 20rem;
 
       & > div {
-        margin-bottom: 2rem;
+        margin-bottom: 32px;
       }
     }
   }
@@ -1468,23 +1447,8 @@ footer {
       font-size: 2rem;
     }
 
-    .social_groups_desktop {
-      display: none;
-    }
-
-    .social_groups_mobile {
-      display: flex;
-    }
-
-    .social_groups {
-      // background-color: yellow;
-      justify-content: center;
-      svg {
-        width: 10px;
-        height: 10px;
-        margin-right: 10px;
-      }
-    }
+  
+    
   }
 
   footer {
@@ -1763,5 +1727,34 @@ html.has-scroll-dragging {
 @keyframes spin {
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+.socials {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  max-width: 300px;
+  border-radius: 8px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  & >:last-child {
+    width: 30px;
+    height: 30px;
   }
 }
