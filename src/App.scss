@@ -165,6 +165,10 @@ main {
   margin-top: 100px;
   padding: 0 20px;
 
+  @media (max-width: 769px) {
+    margin-top: 0;
+  }
+
   // margin-top: 50px;
   // margin-bottom: 10rem;
   // justify-content: space-between;
@@ -254,6 +258,7 @@ main {
 
   @media (max-width: 1024px) {
     padding: 0;
+    margin-top: 0;
   }
 
   .music_slider {
@@ -421,9 +426,13 @@ main {
   // margin-bottom: 10rem;
   margin-top: 100px;
 
-  @media (max-width: 565px) {
-    margin-bottom: 5rem;
+  @media (max-width: 769px) {
+    margin-top: 0;
   }
+
+  // @media (max-width: 565px) {
+  //   margin-bottom: 5rem;
+  // }
 
   img {
     width: 350px;
@@ -460,7 +469,7 @@ main {
   height: 400px;
   width: 700px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     .youtube_video_container {
       width: 100%;
       min-width: 100%;
@@ -1263,7 +1272,7 @@ footer {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   header {
     .hamburger {
       display: initial;
@@ -1658,7 +1667,7 @@ html.has-scroll-dragging {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .grid-container {
     .image-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -1688,7 +1697,7 @@ html.has-scroll-dragging {
   }
 
   // Optional: Add responsive breakpoints
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     height: 32rem; // Taller on larger screens
   }
 
@@ -1698,7 +1707,7 @@ html.has-scroll-dragging {
 .model-viewer-desktop {
 
   // Optional: Add responsive breakpoints
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     display: none;
   }
 }
@@ -1706,7 +1715,7 @@ html.has-scroll-dragging {
   display: none;
 
   // Optional: Add responsive breakpoints
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     display: initial;
   }
 }
