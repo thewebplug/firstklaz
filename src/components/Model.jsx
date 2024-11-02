@@ -1,15 +1,36 @@
 import React, { Suspense, useEffect, useRef } from 'react';
 import { Canvas, useThree, useFrame } from '@react-three/fiber';
-import { useGLTF, Center } from '@react-three/drei';
+import { 
+  useGLTF, 
+  Center, 
+  Environment, 
+  AccumulativeShadows,
+  RandomizedLight,
+  ContactShadows,
+  Stage
+} from '@react-three/drei';
 
 const Model = ({ rotationY }) => {
-  const { scene } = useGLTF('/firstklaz-head.glb');
+  const { scene } = useGLTF('/y - Copy - Copy.glb');
   
+  useEffect(() => {
+    // Enhance the material properties
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        child.material.metalness = 1.1;  // Increase metalness
+        child.material.roughness = 0.1;  // Decrease roughness for more reflection
+        child.material.envMapIntensity = 1.5;  // Enhance environment map reflection
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+  }, [scene]);
+
   const CameraAdjuster = () => {
     const { camera } = useThree();
     
     useEffect(() => {
-      camera.position.set(0, 0, 2);
+      camera.position.set(0, 0.15, 2);
       camera.lookAt(0, 0, 0);
     }, [camera]);
     
@@ -17,7 +38,7 @@ const Model = ({ rotationY }) => {
   };
 
   return (
-    <Center scale={1.05}>
+    <Center scale={1.8}>
       <group rotation-y={rotationY}>
         <primitive 
           object={scene} 
@@ -51,7 +72,6 @@ const ModelViewer = () => {
     isDragging.current = false;
   };
 
-  // Handle touch events for mobile
   const handleTouchStart = (e) => {
     isDragging.current = true;
     previousX.current = e.touches[0].clientX;
@@ -77,12 +97,24 @@ const ModelViewer = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseUp}
     >
-      <Canvas>
-        <ambientLight intensity={0.7} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <directionalLight position={[-10, -10, -5]} intensity={0.5} />
+      <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
+        <color attach="background" args={['#000000']} />
         <Suspense fallback={null}>
-          <Model rotationY={rotationY} />
+          <Stage
+            intensity={1}
+            environment="city"
+            adjustCamera={false}
+          >
+            <Model rotationY={rotationY} />
+          </Stage>
+          <Environment preset="city" background={false} />
+          {/* <ContactShadows
+            position={[0, -1.4, 0]}
+            opacity={0.75}
+            scale={10}
+            blur={2.5}
+            far={4}
+          /> */}
         </Suspense>
       </Canvas>
     </div>
