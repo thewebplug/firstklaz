@@ -735,6 +735,10 @@ main {
   flex-direction: column;
   justify-content: center;
 
+  @media (max-width: 565px) {
+    margin-top: 0;
+  }
+
   .album_title {
     font-size: 3.2rem;
     text-align: center;
@@ -1346,6 +1350,10 @@ footer {
     //   padding: 60px 0;
     // }
 
+
+    @media (max-width: 565px) {
+      font-size: 18px;
+    }
     .hamburger {
       display: initial;
       // background-color: yellow;

@@ -72,7 +72,7 @@ const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [enter, setEnter] = useState(false);
-  const [page, setPage] = useState("tour");
+  const [page, setPage] = useState("");
 
   const handleSubmitGuess = (e) => {
     e.preventDefault();
@@ -3044,6 +3044,14 @@ const Home = () => {
           <div className="hamburger3"></div>
         </div>
         <div className="sidebar_inner">
+          <div
+            onClick={() => {
+              setActive(false);
+              setPage("tour");
+            }}
+          >
+            tour
+          </div>
           <div
             onClick={() => {
               setActive(false);
