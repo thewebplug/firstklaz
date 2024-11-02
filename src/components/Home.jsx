@@ -72,7 +72,7 @@ const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [enter, setEnter] = useState(false);
-  const [page, setPage] = useState("");
+  const [page, setPage] = useState("tour");
 
   const handleSubmitGuess = (e) => {
     e.preventDefault();
@@ -992,25 +992,21 @@ const Home = () => {
                     >
                       GET YOUR TICKETS HERE
                     </a>
-                    {/* <div className="view-img">
-                <img className="music_artwork" src={FandFFlyer} alt="" />
-              </div> */}
                   </div>
 
                   <div className="map">
                     <svg
-                      baseprofile="tiny"
+                      baseProfile="tiny"
                       fill="none"
-                      height="812"
                       stroke="#FFF"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
                       version="1.2"
-                      viewbox="0 0 1000 812"
-                      width="1000"
+                      viewBox="0 0 1000 812"
                       xmlns="http://www.w3.org/2000/svg"
                     >
+                      
                       <g id="features">
                         <path
                           d="M155.3 89.1l0.6-0.2 5.8-0.1 4.9 0.8 2.6-1.3 2.8-0.6 2.3 1.9 2.3 2.2 4.7 2.8 5.1 1.9 2.8 0.7 2.6 1 2.5 1.7 2.8 1.3 2.8 0.3 2.4-1.4 1.1-2.1 1.5-1.8 1.9-0.7 1.3 1.7-0.2 2.4-1.1 2.3-0.3 1.4 0 1.5-0.3 1.2-0.4 1.1-0.9 2.9-0.4 3.1 2.5 4.4 1.7 4.9-0.6 5.6-0.8 2.9-0.3 2.9 2.3 12.5-0.3 5.8-3.4 1.8-5.2-1.7-5.4 1.4-2.7 4.8 0.5 29.8-2.6 12.1-3.3 7.2-0.7 7.4 2.5 2.8 3.4 1.1 3.3-2.1 2.6-3.3 14.4-6.5 1.6-0.4 1.6 0.4 1.2 0.7 0.9-0.3 0.9-0.3 1.1 0.7 0.8 1.2 1.7-0.1 1.5-1 3.1-0.6 3.1 1.2 1.2 1.1 1.6 0.3 4-1 1.7-0.1 1.4-0.8 0.6-1.8 1.3-1.3 1.7-0.1 1.6 0.7 1.8 0.1 4.3-0.6 1.8 1.5 1.1 2.2 6.6 2.9 4.5 1 11.5-0.8 1.2-0.7 1.3-0.3 5.6 0.9 2.8 1 3.6 3.5-0.4 5.3-1.9 5.8 1.5 2.4 2.9 1.1 5.8 9.3 0.7 11.8-2.3-1.5-2.7 0.1-1.1 0.9-1.9 2.2-0.8 1.2-1.9 1.6-2.7 0.2-2.6 0.7-13.1 5.6-5 0.9-7.6 0-2-0.7-1-2.7-0.1-3 0.5-6-1.3-2.6-2.4-1.5-2.7-4.9-1-5.8-4.5-2.7-5.5-0.2-22.4 4.6-10.4 4.7-1.2 4.9 4.8 3.6 5.4 2.3 5.8 0.9 1.3 0 1 0.6 0.6 1.4 1 0.6 2.1 0.6 0.9 2.2 0.7 3.2 0.2 3.1-3.6 4.6 3.1 3.9 1.7 5.1-2.1 1.6-5.3 1.5-5.1 2.5-5.3-0.7-2.4 0.8-1.3 5.1 0.4 5.8-0.3 2.7 0.4 2.6 3.6 4.7 2.3 5.2-1.9 5-2.2 1.7-2.6 0.8-8.7 1.9-2.7 0.9-0.8 2.7 0 3-1 2.1-5.2-0.3-1.8-1.6 1.2-5.7 0.4-5.6-1.6-1.8-1.9-1.5-1.2-2.6-0.3-3 0.5-5.7 2.8-4.9 8.8-5 0.2-1.4 1.9-1.9 0.5-1.1 0.2-1.3 0-2.9 2.5-13.8-0.1-1.9-4.9-1.5-9.2-6-7.7-2.1-7.8 1.2-20.8 0.5-4-0.4-8.4-4-6.8-4.2-6.9-0.8-0.6 0.6-0.1 0-0.7 0.1-0.6-0.1-1.8-1.7-13.6-19.3-1.1-2.1-0.2-1.8 1.6-4.1 0.4-1.2 0.9-3.5 5.3-9 1.7-1.8 3.9-2.3 0.9-0.9 0.5-1.7-0.4-1.5-0.9-1.5-1.8-1.9-0.3-0.2-0.3-0.2-0.4-0.8-0.2-0.8-0.5-4.4 0.4-1.3 0.8-1.1 1.3-1.3 1.3-2.6-0.4-2.6-1.8-5.7 0-3.4 2-10.2-0.7-19.3 0.3-0.8 16.6-12.5 4.9-4.7 12.1-19.1 2.4-16.7z"
@@ -2477,7 +2473,7 @@ const Home = () => {
                         target="_blank"
                         className="slider_item"
                       >
-                        <img className="music_artwork" src={FAndFPh} alt="" />
+                        <img className="music_artwork shows_image" src={FAndFPh} alt="" />
                         {/* <div className="music_gif">
                     <img src={Genzfuji} alt="" />
                   </div> */}
@@ -2491,7 +2487,7 @@ const Home = () => {
                         target="_blank"
                         className="slider_item"
                       >
-                        <img className="music_artwork" src={FAndFAbj} alt="" />
+                        <img className="music_artwork shows_image" src={FAndFAbj} alt="" />
                         {/* <div className="music_gif">
                     <img src={Genzfuji} alt="" />
                   </div> */}
@@ -2506,7 +2502,7 @@ const Home = () => {
                         className="slider_item"
                       >
                         <img
-                          className="music_artwork"
+                          className="music_artwork shows_image"
                           src={LagosStreetShow}
                           alt=""
                         />
@@ -2521,10 +2517,10 @@ const Home = () => {
                       <a
                         href="https://onerpm.link/gen-zfuji"
                         target="_blank"
-                        className="slider_item"
+                        className="slider_item shows_image"
                       >
                         <img
-                          className="music_artwork"
+                          className="music_artwork shows_image"
                           src={AbujaStreetShow}
                           alt=""
                         />
@@ -2662,6 +2658,7 @@ const Home = () => {
               viewBox="0 0 512 512"
               enable-background="new 0 0 512 512"
               xmlSpace="preserve"
+              onClick={() => window.open("https://instagram.com/firstklaz")}
             >
               <defs>
                 <linearGradient
@@ -2734,6 +2731,7 @@ const Home = () => {
               viewBox="0 0 1024 1024"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
+              onClick={() => window.open("https://www.facebook.com/firstklaz/")}
             >
               <defs>
                 <linearGradient
@@ -2809,6 +2807,7 @@ const Home = () => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 512 512"
               xmlSpace="preserve"
+              onClick={() => window.open("https://x.com/firstklaz_")}
             >
               <defs>
                 <linearGradient
@@ -2882,6 +2881,8 @@ const Home = () => {
               viewBox="0 0 32 32"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
+              onClick={() => window.open("https://www.tiktok.com/@firstklaz")}
+
             >
               <defs>
                 <linearGradient
@@ -2957,6 +2958,7 @@ const Home = () => {
               viewBox="0 -146.13 500.612 500.612"
               xmlns="http://www.w3.org/2000/svg"
               fill="#000"
+              onClick={() => window.open("https://www.youtube.com/@firstklaz")}
             >
               <defs>
                 <linearGradient
