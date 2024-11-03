@@ -2,8 +2,8 @@ import logo from "./logo.svg";
 import "./App.scss";
 
 import { Route, Routes, useLocation } from "react-router-dom";
-import Home from "./components/Home";
-import Test from "./components/Test";
+import Home from "./pages/Home";
+import Test from "./pages/Test";
 import LocomotiveScroll from "locomotive-scroll";
 import { useEffect, useLayoutEffect, useRef } from "react";
 
