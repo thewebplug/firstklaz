@@ -29,7 +29,7 @@ import BlackBack from "../img/firsty black back.jpg";
 import BlackFront from "../img/firsty black front.jpg";
 import WhiteBack from "../img/firsty white back.jpg";
 import WhiteFront from "../img/firsty white front.jpg";
-import Gallery1 from "../img/IMG_0797.jpg";
+// import Gallery1 from "../img/IMG_0797.jpg";
 
 import Gallery2 from "../img/IMG_0802.jpg";
 import Gallery3 from "../img/IMG_0841.jpg";
@@ -502,7 +502,7 @@ const Home = () => {
   const gridImages = [
     {
       id: 1,
-      src: Gallery1,
+      src: Gallery2,
       cols: 3,
       rows: 2,
       category: "landscape",
