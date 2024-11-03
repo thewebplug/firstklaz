@@ -30,6 +30,7 @@ import BlackFront from "../img/firsty black front.jpg";
 import WhiteBack from "../img/firsty white back.jpg";
 import WhiteFront from "../img/firsty white front.jpg";
 import Gallery1 from "../img/IMG_0797.jpg";
+
 import Gallery2 from "../img/IMG_0802.jpg";
 import Gallery3 from "../img/IMG_0841.jpg";
 import Gallery4 from "../img/IMG_0845.jpg";
