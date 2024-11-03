@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "../img/Focus Image.jpg";
 import gsap from "gsap";
 import Amanda from "../img/Amanda.png";
 import Ilg from "../img/234efw32232.jpg";
@@ -17,35 +16,29 @@ import Sliders from "../img/frdsvaf.jpg";
 import ShowThem from "../img/cdac3223.jpg";
 import Olomi from "../img/olomi.jpg";
 import Sacrifice from "../img/sacrifice art.jpg";
-import HeaderImage from "../img/IMG_0845.jpeg";
 import Gbese from "../img/cdsazvx 32.jpg";
 import Tonight from "../img/tonight.jpg";
-import Performance from "../img/performance.gif";
 import Ogini from "../img/Ogini.jpg";
-import FirstklazLogo from "../img/Firstklaz Logo.PNG";
 import InwgsGif from "../img/SaveInsta.App - 2920846823080677928_3552322412 (1).gif";
 import { Tooltip } from "react-tooltip";
-import BioHidden1 from "../img/428491299_18325506289114413_1712667963143189986_n.jpg";
-import BioHidden2 from "../img/428491299_18325506289114413_1712667963143189986_n.jpg";
 import HelicopterBoyFreestyle from "../img/ednvje65453.jpg";
-import CityColors from "../img/363277634_797584112043644_3661946017774740676_n.jpg";
 import LagosStreetShow from "../img/360098092_18293309251114413_2192173551435584222_n.jpg";
 import FAndFPh from "../img/firstKlaz-and-friends-ph.jpg";
 import FAndFAbj from "../img/firstKlaz-and-friends-abj.jpg";
-import BlackBack from "../img/firsty black back.png";
-import BlackFront from "../img/firsty black front.png";
-import WhiteBack from "../img/firsty white back.png";
-import WhiteFront from "../img/firsty white front.png";
-import Gallery1 from "../img/IMG_0797.JPG";
-import Gallery2 from "../img/IMG_0802.JPG";
-import Gallery3 from "../img/IMG_0841.JPG";
-import Gallery4 from "../img/IMG_0845.JPG";
-import Gallery5 from "../img/IMG_0847.JPG";
-import Gallery6 from "../img/IMG_0880.JPG";
-import Gallery7 from "../img/IMG_0936.JPG";
-import Gallery8 from "../img/IMG_0956.JPG";
-import Gallery9 from "../img/IMG_0993.JPG";
-import Gallery10 from "../img/IMG_1164.JPG";
+import BlackBack from "../img/firsty black back.jpg";
+import BlackFront from "../img/firsty black front.jpg";
+import WhiteBack from "../img/firsty white back.jpg";
+import WhiteFront from "../img/firsty white front.jpg";
+import Gallery1 from "../img/IMG_0797.jpg";
+import Gallery2 from "../img/IMG_0802.jpg";
+import Gallery3 from "../img/IMG_0841.jpg";
+import Gallery4 from "../img/IMG_0845.jpg";
+import Gallery5 from "../img/IMG_0847.jpg";
+import Gallery6 from "../img/IMG_0880.jpg";
+import Gallery7 from "../img/IMG_0936.jpg";
+import Gallery8 from "../img/IMG_0956.jpg";
+import Gallery9 from "../img/IMG_0993.jpg";
+import Gallery10 from "../img/IMG_1164.jpg";
 import AbujaStreetShow from "../img/351750477_1003886440969838_7863322309839893458_n.jpg";
 import { useLayoutEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -698,9 +691,7 @@ const Home = () => {
                   </defs>
                 </svg>
               </div> */}
-              {/* <img
-              src={FirstklazLogo}
-              /> */}
+              
               <LogoModelViewer handleHome={() => setPage("")} />
             </div>
             {/* <div className="social_groups social_groups_desktop">
