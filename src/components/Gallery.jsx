@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import Gallery1 from "../img/IMG_0797.jpg";
-import Gallery2 from "../img/IMG_0802.jpg";
-import Gallery3 from "../img/IMG_0841.jpg";
-import Gallery4 from "../img/IMG_0845.jpg";
-import Gallery5 from "../img/IMG_0847.jpg";
-import Gallery6 from "../img/IMG_0880.jpg";
-import Gallery7 from "../img/IMG_0936.jpg";
-import Gallery8 from "../img/IMG_0956.jpg";
-import Gallery9 from "../img/IMG_0993.jpg";
-import Gallery10 from "../img/IMG_1164.jpg";
+import Gallery1 from "../img/img_0797.jpg";
+import Gallery2 from "../img/img_0802.jpg";
+import Gallery3 from "../img/img_0841.jpg";
+import Gallery4 from "../img/img_0845.jpg";
+import Gallery5 from "../img/img_0847.jpg";
+import Gallery6 from "../img/img_0880.jpg";
+import Gallery7 from "../img/img_0936.jpg";
+import Gallery8 from "../img/img_0956.jpg";
+import Gallery9 from "../img/img_0993.jpg";
+import Gallery10 from "../img/img_1164.jpg";
 
 export default function Gallery() {
 const [image, setImage] = useState("")
