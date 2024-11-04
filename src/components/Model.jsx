@@ -135,7 +135,7 @@ const ModelViewer = () => {
             environment={null}
             adjustCamera={false}
           >
-            <Model scale={2} rotationY={rotationY} />
+            <Model scale={1.3} rotationY={rotationY} />
           <Environment 
           // preset="city" background={false}
           path='/hdri/' files="potsdamer_platz_1k.hdr"

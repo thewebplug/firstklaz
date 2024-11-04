@@ -1036,11 +1036,12 @@ main {
   &__title {
     font-size: 80px;
     color: #FFF;
-    // margin-bottom: 10px;
+    margin: 20px 0;
     // display: none;
     font-family: RocGroteskWide;
     text-transform: uppercase;
     text-align: center;
+    line-height: 100%;
     // background: yellow;
   }
 
@@ -1100,6 +1101,10 @@ main {
         height: auto;
         max-height: 70%;
         object-fit: cover;
+
+        @media (max-width: 565px) {
+          max-height: 60%;
+        }
       }
 
       & > button {
