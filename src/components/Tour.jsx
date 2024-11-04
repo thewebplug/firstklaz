@@ -616,7 +616,7 @@ export default function Tour() {
           <Tooltip
             id="map-tooltip"
             place="top"
-            style={{ fontSize: "60px" }}
+            style={{ fontSize: "36px" }}
           />
         </div>
       </>
