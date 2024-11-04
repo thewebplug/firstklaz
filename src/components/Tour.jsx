@@ -173,7 +173,7 @@ export default function Tour() {
                 fill="#FF0000"
                 className="map__active"
                 data-tooltip-id="map-tooltip"
-                data-tooltip-content="Port Harcourt"
+                data-tooltip-content="Port Harcourt (Sold out)"
               ></path>
 
               <path
@@ -351,7 +351,7 @@ export default function Tour() {
                 fill="#FF0000"
                 className="map__active"
                 data-tooltip-id="map-tooltip"
-                data-tooltip-content="Abuja"
+                data-tooltip-content="Abuja (Sold out)"
               ></path>
 
               <text
