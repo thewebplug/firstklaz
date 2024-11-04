@@ -126,6 +126,7 @@ const ModelViewer = () => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseUp}
+      
     >
      <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
         <color attach="background" args={['#000000']} />
