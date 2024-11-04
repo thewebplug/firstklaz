@@ -9,6 +9,8 @@ import {
   ContactShadows,
   Stage
 } from '@react-three/drei';
+import { Html } from '@react-three/drei'
+
 
 const Model = ({ rotationY, scale }) => {
   const { scene } = useGLTF('/y - Copy - Copy.glb');
@@ -100,7 +102,13 @@ const ModelViewer = () => {
     >
       <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
         <color attach="background" args={['#000000']} />
-        <Suspense fallback={null}>
+        <Suspense fallback={
+         <Html center>
+         <div className="spinner-container">
+           <div className="spinner" />
+         </div>
+       </Html>
+        }>
           <Stage
             intensity={1}
             environment={null}
@@ -130,7 +138,13 @@ const ModelViewer = () => {
     >
      <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
         <color attach="background" args={['#000000']} />
-        <Suspense fallback={null}>
+        <Suspense fallback={
+          <Html center>
+          <div className="spinner-container">
+            <div className="spinner" />
+          </div>
+        </Html>
+        }>
           <Stage
             intensity={1}
             environment={null}

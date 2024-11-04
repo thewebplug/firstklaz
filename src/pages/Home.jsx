@@ -41,7 +41,7 @@ const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [enter, setEnter] = useState(false);
-  const [page, setPage] = useState("");
+  const [page, setPage] = useState("tour");
 
   const handleSubmitGuess = (e) => {
     e.preventDefault();
