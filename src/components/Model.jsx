@@ -103,19 +103,16 @@ const ModelViewer = () => {
         <Suspense fallback={null}>
           <Stage
             intensity={1}
-            environment="city"
+            environment={null}
             adjustCamera={false}
           >
             <Model scale={2} rotationY={rotationY} />
+          <Environment 
+          // preset="city" background={false}
+          path='/hdri/' files="potsdamer_platz_1k.hdr"
+          />
           </Stage>
-          <Environment preset="city" background={false} />
-          {/* <ContactShadows
-            position={[0, -1.4, 0]}
-            opacity={0.75}
-            scale={10}
-            blur={2.5}
-            far={4}
-          /> */}
+          
         </Suspense>
       </Canvas>
     </div>
@@ -130,24 +127,21 @@ const ModelViewer = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseUp}
     >
-      <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
+     <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
         <color attach="background" args={['#000000']} />
         <Suspense fallback={null}>
           <Stage
             intensity={1}
-            environment="city"
+            environment={null}
             adjustCamera={false}
           >
-            <Model scale={1.3} rotationY={rotationY} />
+            <Model scale={2} rotationY={rotationY} />
+          <Environment 
+          // preset="city" background={false}
+          path='/hdri/' files="potsdamer_platz_1k.hdr"
+          />
           </Stage>
-          <Environment preset="city" background={false} />
-          {/* <ContactShadows
-            position={[0, -1.4, 0]}
-            opacity={0.75}
-            scale={10}
-            blur={2.5}
-            far={4}
-          /> */}
+          
         </Suspense>
       </Canvas>
     </div>
