@@ -3,6 +3,7 @@ import LagosStreetShow from "../img/360098092_18293309251114413_2192173551435584
 import FAndFPh from "../img/firstKlaz-and-friends-ph.jpg";
 import FAndFAbj from "../img/firstKlaz-and-friends-abj.jpg";
 import AbujaStreetShow from "../img/351750477_1003886440969838_7863322309839893458_n.jpg";
+import FandFKd from "../img/f&f-kaduna.jpg";
 
 export default function Shows() {
 
@@ -35,7 +36,21 @@ export default function Shows() {
           </svg>
           <div className="music_inner">
             <a
-              href="https://open.spotify.com/track/1IWBeLzkyQ8ijoAD8BjIiU?si=44dba142aa004fe7"
+              href="https://tix.africa/discover/fnftour"
+              target="_blank"
+              className="slider_item"
+            >
+              <img className="music_artwork shows_image" src={FandFKd} alt="" />
+              {/* <div className="music_gif">
+          <img src={Genzfuji} alt="" />
+        </div> */}
+              <div className="music_name">
+                Firstklaz & Friends Kaduna
+              </div>
+              <button className="music_button">Sold out</button>
+            </a>
+            <a
+              href="https://tix.africa/discover/fnftour"
               target="_blank"
               className="slider_item"
             >

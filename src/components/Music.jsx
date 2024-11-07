@@ -12,6 +12,7 @@ import Tonight from "../img/tonight.jpg";
 import Ogini from "../img/Ogini.jpg";
 import HelicopterBoyFreestyle from "../img/ednvje65453.jpg";
 import Ilg from "../img/234efw32232.jpg";
+import Jo from "../img/sdaCSAc.jpeg";
 import { useEffect } from "react";
 
 export default function Music() {
@@ -70,7 +71,7 @@ return(
           <button className="music_button">Listen now</button>
         </a>
         <a
-          href="https://waverlymusik.lnk.to/GenZFujiII"
+          href="https://open.spotify.com/track/3V7p0TjIBNai9YpG6wN7VF?si=1af0b73794ef4ffc"
           target="_blank"
           className="slider_item"
         >
@@ -82,7 +83,7 @@ return(
           <button className="music_button">Listen now</button>
         </a>
         <a
-          href="https://onerpm.link/gen-zfuji"
+          href="https://open.spotify.com/track/513bT5hsTWaLwIiwktuAPG?si=03a67a1cd79a4f52"
           target="_blank"
           className="slider_item"
         >
@@ -94,7 +95,7 @@ return(
           <button className="music_button">Listen now</button>
         </a>
         <a
-          href="https://onerpm.link/firstklaz-ogini"
+          href="https://open.spotify.com/track/4rp9m6fnDUvl5eGXuSPkfI?si=61b0157e700a4b8d"
           target="_blank"
           className="slider_item"
         >
@@ -106,52 +107,52 @@ return(
           <button className="music_button">Listen now</button>
         </a>
         <a
-          href="https://orcd.co/ilikegirls_firstklazhitsound"
+          href="https://open.spotify.com/track/4kbBGiJoxDzBOez59KMKPL?si=7be9d36658004719"
           target="_blank"
           className="slider_item"
         >
           <img className="music_artwork" src={Ilg} alt="" />
           <div className="music_gif">{/* <img src={IlgGif} alt="" /> */}</div>
-          <div className="music_name">I like girls</div>
+          <div className="music_name">I Like Girls</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://onerpm.link/FirstKlaz-So" target="_blank">
+        <a href="https://music.apple.com/ng/album/so/1685998559?i=1685998560" target="_blank">
           <img src={Só} alt="" />
           <div className="music_gif">{/* <img src={SoGif} alt="" /> */}</div>
-          <div className="music_name">só</div>
+          <div className="music_name">Só</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://fanlink.to/helicopter-boy" target="_blank">
+        <a href="https://open.spotify.com/track/33GMrrUaLz5tAgsndhyYJm?si=5c322a55b58941a7" target="_blank">
           <img src={HelicopterBoyFreestyle} alt="" />
           <div className="music_gif">
             {/* <img src={HelicopterGif} alt="" /> */}
           </div>
-          <div className="music_name">Helicopter boy(freestyle)</div>
+          <div className="music_name">Helicopter Boy(Freestyle)</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://mad.ffm.to/firstklaz-inwgs" target="_blank">
+        <a href="https://music.apple.com/ng/album/i-no-wan-go-school/1641273689?i=1641273692" target="_blank">
           <img src={Inwgs} alt="" />
           <div className="music_gif">{/* <img src={InwgsGif} alt="" /> */}</div>
-          <div className="music_name">I no wan go school</div>
+          <div className="music_name">I No Wan Go School</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://fanlink.to/Firstklaz-Sliders" target="_blank">
+        <a href="https://open.spotify.com/track/0F7LG63o9ruNfMsyy95lk6?si=0fc03f145ad944cc" target="_blank">
           <img src={Sliders} alt="" />
           <div className="music_gif">
             {/* <img src={SlidersGif} alt="" /> */}
           </div>
-          <div className="music_name">sLIDERS</div>
+          <div className="music_name">Sliders</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://fanlink.to/Firstklaz-Sacrifice" target="_blank">
+        <a href="https://open.spotify.com/track/2ZHiFd6HXyPNJsodMpEbHV?si=e527e9a62f024426" target="_blank">
           <img src={Sacrifice} alt="" />
           <div className="music_gif">
             {/* <img src={ShowThemGif} alt="" /> */}
           </div>
-          <div className="music_name">sAcrifice</div>
+          <div className="music_name">Sacrifice</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://fanlink.to/ShowThem" target="_blank">
+        <a href="https://open.spotify.com/track/4vIhJaS3qjJVBVFF0Hz4dg?si=c94e79c62f504858" target="_blank">
           <img src={Olomi} alt="" />
           <div className="music_gif">
             {/* <img src={ShowThemGif} alt="" /> */}
@@ -159,15 +160,15 @@ return(
           <div className="music_name">Olomi</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a href="https://fanlink.to/ShowThem" target="_blank">
+        <a href="https://open.spotify.com/track/75FjivAij6BkqYE7CGM0D8?si=01e7547d1a934f0f" target="_blank">
           <img src={ShowThem} alt="" />
           <div className="music_gif">
             {/* <img src={ShowThemGif} alt="" /> */}
           </div>
-          <div className="music_name">show Them</div>
+          <div className="music_name">Show Them</div>
           <button className="music_button">Listen now</button>
         </a>
-        <a>
+        <a href="https://open.spotify.com/track/4wR8VCRFN6MGkYDzKneuLB?si=68529ca1ab78436a" target="_blank">
           <img src={Gbese} alt="" />
           <div className="music_gif">
             {/* <img src={HelicopterGif} alt="" /> */}
@@ -176,7 +177,18 @@ return(
           <button className="music_button">Listen now</button>
         </a>
         <a
-          href="https://open.spotify.com/track/4LHgluF02FqumshmgPop4a?si=a33fdc13aa274211"
+          href="https://open.spotify.com/track/3KFg3Uz6n7B09jpRcQ6MUB?si=84134b31d0724a2e"
+          target="_blank"
+        >
+          <img src={Jo} alt="" />
+          <div className="music_gif">
+            {/* <img src={HelicopterGif} alt="" /> */}
+          </div>
+          <div className="music_name">JO (Freestyle)</div>
+          <button className="music_button">Listen now</button>
+        </a>
+        <a
+          href="https://open.spotify.com/track/4LHgluF02FqumshmgPop4a?si=722807340c624afc"
           target="_blank"
         >
           <img src={Tonight} alt="" />
