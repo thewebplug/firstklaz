@@ -4,6 +4,9 @@ import FAndFPh from "../img/firstKlaz-and-friends-ph.jpg";
 import FAndFAbj from "../img/firstKlaz-and-friends-abj.jpg";
 import AbujaStreetShow from "../img/351750477_1003886440969838_7863322309839893458_n.jpg";
 import FandFKd from "../img/f&f-kaduna.jpg";
+import FandFJos from "../img/firstklaz-and-friends-jos.jpg";
+import FandFLagos from "../img/firstklaz-and-friends-lagos.jpg";
+import FandFIbadan from "../img/firstklaz-and-friends-ibadan.jpg";
 
 export default function Shows() {
 
@@ -35,6 +38,48 @@ export default function Shows() {
             </g>
           </svg>
           <div className="music_inner">
+            <a
+              href="https://tix.africa/discover/fnftour"
+              target="_blank"
+              className="slider_item"
+            >
+              <img className="music_artwork shows_image" src={FandFJos} alt="" />
+              {/* <div className="music_gif">
+          <img src={Genzfuji} alt="" />
+        </div> */}
+              <div className="music_name">
+                Firstklaz & Friends Jos
+              </div>
+              <button className="music_button">Get tickets</button>
+            </a>
+            <a
+              href="https://tix.africa/discover/fnftour"
+              target="_blank"
+              className="slider_item"
+            >
+              <img className="music_artwork shows_image" src={FandFLagos} alt="" />
+              {/* <div className="music_gif">
+          <img src={Genzfuji} alt="" />
+        </div> */}
+              <div className="music_name">
+                Firstklaz & Friends Lagos
+              </div>
+              <button className="music_button">Get tickets</button>
+            </a>
+            <a
+              href="https://tix.africa/discover/fnftour"
+              target="_blank"
+              className="slider_item"
+            >
+              <img className="music_artwork shows_image" src={FandFIbadan} alt="" />
+              {/* <div className="music_gif">
+          <img src={Genzfuji} alt="" />
+        </div> */}
+              <div className="music_name">
+                Firstklaz & Friends Ibadan
+              </div>
+              <button className="music_button">Get tickets</button>
+            </a>
             <a
               href="https://tix.africa/discover/fnftour"
               target="_blank"
