@@ -4,6 +4,8 @@ import BlackBack from "../img/firsty black back.jpg";
 import BlackFront from "../img/firsty black front.jpg";
 import WhiteBack from "../img/firsty white back.jpg";
 import WhiteFront from "../img/firsty white front.jpg";
+import SleevelessWhiteFront from "../img/firsty sleeveless front.png";
+import SleevelessWhiteBack from "../img/firsty sleeveless back.PNG";
 
 export default function Store() {
 
@@ -38,6 +40,27 @@ export default function Store() {
             <a
               //  href="https://paystack.com/pay/nvdyhwcpxf"
               //  target="_blank"
+              className="slider_item"
+            >
+              <img
+                className="music_artwork"
+                src={SleevelessWhiteFront}
+                alt=""
+              />
+              <div className="music_gif store_gif">
+                <img src={SleevelessWhiteBack} alt="" />
+              </div>
+              <div className="music_name">Tour Sleeveless White Tee</div>
+              <a
+                href="https://paystack.com/pay/nvdyhwcpxf"
+                target="_blank"
+              >
+                <button className="music_button">Buy now</button>
+              </a>
+            </a>
+            <a
+              // href="https://paystack.com/pay/nvdyhwcpxf"
+              // target="_blank"
               className="slider_item"
             >
               <img
@@ -77,27 +100,7 @@ export default function Store() {
                 <button className="music_button">Buy now</button>
               </a>
             </a>
-            <a
-              // href="https://paystack.com/pay/nvdyhwcpxf"
-              // target="_blank"
-              className="slider_item"
-            >
-              <img
-                className="music_artwork"
-                src={BlackFront}
-                alt=""
-              />
-              <div className="music_gif store_gif">
-                <img src={BlackBack} alt="" />
-              </div>
-              <div className="music_name">Tour Black Tee</div>
-              <a
-                href="https://paystack.com/pay/nvdyhwcpxf"
-                target="_blank"
-              >
-                <button className="music_button">Buy now</button>
-              </a>
-            </a>
+          
             <a
               // href="https://paystack.com/pay/nvdyhwcpxf"
               // target="_blank"

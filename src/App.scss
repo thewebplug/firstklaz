@@ -325,6 +325,11 @@ main {
           margin-left: 10px;
         }
       }
+
+      .music_artwork{
+        transition: 0.4s;
+      }
+
       
 
       .music_gif {
@@ -335,6 +340,7 @@ main {
         left: 0;
         transition: 0.5s;
         overflow-y: hidden;
+        transition: 0.4s;
 
         img {
           margin-top: -160px;
@@ -351,6 +357,10 @@ main {
     & > a:hover {
       .music_gif {
         opacity: 1;
+      }
+
+      .music_artwork{
+        opacity: 0;
       }
 
       // .music_name {
